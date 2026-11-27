@@ -40,7 +40,7 @@ $$\mu(v) = \langle v, t_a \rangle - \langle v, t_n \rangle$$
 
 3. **GLAS**: Computes the image-level score directly from the pre-transport multi-scale grid $U_0$ ($M = 8$, $\lambda_G = 0.5$):
 
-   $$s(x, c) = \lambda_G G_0 + (1 - \lambda_G)\operatorname{Mean}(\operatorname{Top}M(U_0))$$
+   $$s(x, c) = \lambda_G G_0 + (1 - \lambda_G)\mathrm{Mean}(\mathrm{Top}M(U_0))$$
 
 ## Main Results
 
