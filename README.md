@@ -12,22 +12,9 @@ MSAT（Multi-Scale Anchored Transport）是一种无需训练的零样本视觉�
 
 ## 方法概览
 
-```text
-测试图像 + 类别文本提示
-             |
-  冻结的 C-RADIOv4-h 双尺度整图编码
-             |
-  MSAM：多尺度结构感知异常映射
-             |
-       原生多尺度响应 U0
-         /           \
-        /             \
-上采样与平滑       GLAS：传输前的局部上尾均值
-      |                  + 全局异常间隔
-AMT：同图参考分布锚定           |
-      |                  图像级异常分数
-像素级异常图
-```
+![MSAT framework](assets/framework.png)
+
+MSAT 通过双尺度结构感知异常映射（MSAM）构建共享证据，再分别由锚定单调传输（AMT）输出像素级异常图、由全局–局部异常评分（GLAS）输出图像级异常分数。框架图使用作者提供的原图，点击可查看完整尺寸。
 
 ### MSAM — Multi-Scale Structure-Aware Anomaly Mapping
 
