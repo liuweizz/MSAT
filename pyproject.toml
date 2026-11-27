@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amt1"
+version = "0.1.0"
+description = "MSAT: Training-Free Zero-Shot Anomaly Detection via Multi-Scale Anchored Transport"
+requires-python = ">=3.12"
+dynamic = ["dependencies"]
+
+[project.urls]
+Repository = "https://github.com/liuweizz/MSAT"
+Documentation = "https://github.com/liuweizz/MSAT/blob/a40/README.md"
+Issues = "https://github.com/liuweizz/MSAT/issues"
+
+[project.scripts]
+amt1 = "amt1.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.package-data]
+amt1 = ["_vendor/**/*.txt", "_vendor/**/*.json"]

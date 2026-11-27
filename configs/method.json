@@ -1,0 +1,21 @@
+{
+  "backbone": "c-radio_v4-h",
+  "image_sizes": [448, 672],
+  "patch_size": 16,
+  "context_sizes": [5, 9],
+  "regions": [8, 32],
+  "region_space": "sam",
+  "seed": 0,
+  "region_kmeans_iters": 15,
+  "affinity_space": "trunk",
+  "affinity_temperature": 0.1,
+  "affinity_retention": 0.5,
+  "affinity_iterations": 1,
+  "scale_mixture": 0.5,
+  "native_tail_count": 8,
+  "global_local_mixture": 0.5,
+  "pixel_size": 518,
+  "pixel_sigma": 4.0,
+  "foreground_gates": {"industrial": 0.016, "clinical": 0.014},
+  "ksdd_canvas_edges": [0, 173, 345, 518]
+}

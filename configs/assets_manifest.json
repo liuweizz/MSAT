@@ -1,0 +1,87 @@
+{
+  "files": [
+    {
+      "path": "artifacts/models/radio/c-radio_v4-h_half.pth.tar",
+      "sha256": "bace44df72e750bc8555ea6979cc19d1a87e12ade89582edfe090513d5d6aab9",
+      "bytes": 1681320675,
+      "repository": "nvidia/C-RADIOv4-H",
+      "revision": "0057b339059c0b9e1b4ba996f975410ebbfdfcc8",
+      "official_url": "https://huggingface.co/nvidia/C-RADIOv4-H/resolve/0057b339059c0b9e1b4ba996f975410ebbfdfcc8/c-radio_v4-h_half.pth.tar"
+    },
+    {
+      "path": "artifacts/models/siglip2/config.json",
+      "sha256": "04d69dffcd86c212b5433f791ac685a54a951c00da5ed556e968f10aa101f663",
+      "bytes": 537,
+      "repository": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "official_url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/resolve/a713301b217d38485fb2204c808367d10bc3cc40/config.json"
+    },
+    {
+      "path": "artifacts/models/siglip2/model.safetensors.index.json",
+      "sha256": "3766cd1194767496943ae5deb6add8c994b41158c69e6c13d4037cbaf8a4e118",
+      "bytes": 101251,
+      "repository": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "official_url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/resolve/a713301b217d38485fb2204c808367d10bc3cc40/model.safetensors.index.json"
+    },
+    {
+      "path": "artifacts/models/siglip2/model-00001-of-00002.safetensors",
+      "sha256": "9f6da5ad2e3178b0c1197b740c9ffefee0bc733ee8759095a5ea8c4c845a3f4e",
+      "bytes": 4994453512,
+      "repository": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "official_url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/resolve/a713301b217d38485fb2204c808367d10bc3cc40/model-00001-of-00002.safetensors"
+    },
+    {
+      "path": "artifacts/models/siglip2/model-00002-of-00002.safetensors",
+      "sha256": "06e64949dd7cafc4d278723533e2591145ae8e5616d2c0c5d8458de25ceede34",
+      "bytes": 2493222896,
+      "repository": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "official_url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/resolve/a713301b217d38485fb2204c808367d10bc3cc40/model-00002-of-00002.safetensors"
+    },
+    {
+      "path": "artifacts/models/siglip2/preprocessor_config.json",
+      "sha256": "fb2817d3523ca3b666c859f15320c7138416bc38ffc515e2963f78c868c51c90",
+      "bytes": 394,
+      "repository": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "official_url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/resolve/a713301b217d38485fb2204c808367d10bc3cc40/preprocessor_config.json"
+    },
+    {
+      "path": "artifacts/models/siglip2/special_tokens_map.json",
+      "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "bytes": 636,
+      "repository": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "official_url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/resolve/a713301b217d38485fb2204c808367d10bc3cc40/special_tokens_map.json"
+    },
+    {
+      "path": "artifacts/models/siglip2/tokenizer.json",
+      "sha256": "cb9140fae3ac5122c972d37adf83e1248471a38147ad76f8215c8872c6fd8322",
+      "bytes": 34363039,
+      "repository": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "official_url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/resolve/a713301b217d38485fb2204c808367d10bc3cc40/tokenizer.json"
+    },
+    {
+      "path": "artifacts/models/siglip2/tokenizer.model",
+      "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "bytes": 4241003,
+      "repository": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "official_url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/resolve/a713301b217d38485fb2204c808367d10bc3cc40/tokenizer.model"
+    },
+    {
+      "path": "artifacts/models/siglip2/tokenizer_config.json",
+      "sha256": "14afe629fe4959b9e0d51e1852b8d9f7ad074f90a1a7125a4fcdd17f06e78fc8",
+      "bytes": 47164,
+      "repository": "google/siglip2-giant-opt-patch16-384",
+      "revision": "a713301b217d38485fb2204c808367d10bc3cc40",
+      "official_url": "https://huggingface.co/google/siglip2-giant-opt-patch16-384/resolve/a713301b217d38485fb2204c808367d10bc3cc40/tokenizer_config.json"
+    }
+  ],
+  "model_source_sha256": "287d45ed3df2e80b6133f9c37555f604748be6e994cfb33e4fc4eb9e1f25c04d",
+  "radio_checkpoint_revision": "0057b339059c0b9e1b4ba996f975410ebbfdfcc8",
+  "siglip2_revision": "a713301b217d38485fb2204c808367d10bc3cc40"
+}

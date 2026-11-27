@@ -1,0 +1,5 @@
+{
+  "radio_source": "../third_party/C-RADIO",
+  "checkpoint": "../artifacts/models/radio/c-radio_v4-h_half.pth.tar",
+  "teacher_directory": "../artifacts/models/siglip2"
+}

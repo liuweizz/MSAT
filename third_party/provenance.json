@@ -1,0 +1,278 @@
+{
+  "RADIOlogy": {
+    "repository": "RADIOlogy upstream checkout",
+    "commit": "7c36e32be4910f9b1bccf588ec14fb40f779f74e"
+  },
+  "C_RADIO": {
+    "repository": "https://github.com/NVlabs/RADIO",
+    "actual_original_python_tree_sha256": "287d45ed3df2e80b6133f9c37555f604748be6e994cfb33e4fc4eb9e1f25c04d",
+    "authenticated_git_commit": null,
+    "fingerprint_algorithm": "SHA256 of sorted relative Python path + NUL + file SHA256 + newline records"
+  },
+  "modifications": [
+    {
+      "path": "third_party/C-RADIO/hubconf.py",
+      "original_sha256": "99677a6302857b1d1e745a72f0a9840101910dc7f3865e8ebf2ac48c9aaeb4a9",
+      "released_sha256": "917e3a44f1a2d4b74fb78a71dae0284af7beacf574916039496ad579dab23405"
+    },
+    {
+      "path": "third_party/C-RADIO/radio/siglip2_adaptor.py",
+      "original_sha256": "1f40f7d77beefd69ad86aac61b12c82ed915b4012e6bea1628fc8abe80782851",
+      "released_sha256": "971b7b2b17d08fade68a325359d2c8f860b2fa6a5ad86cc1fc6bc7a95e564c36"
+    }
+  ],
+  "files": {
+    "src/amt1/_vendor/__init__.py": {
+      "sha256": "dff5d52d4f3e4d4be81b95871ce029ae4c731a4723976974d394e79bb46f176f",
+      "bytes": 49
+    },
+    "src/amt1/_vendor/radiology/utils.py": {
+      "sha256": "d0eb04ce21a390d815ac0c77277c0a053f6ad882eca836ddc1dc6da2d4dbea54",
+      "bytes": 1994
+    },
+    "src/amt1/_vendor/radiology/preprocessing.py": {
+      "sha256": "4bf3bdd207199dc76fc41cdc0af56c79e8144b6465d926766f44df2e932a6701",
+      "bytes": 769
+    },
+    "src/amt1/_vendor/radiology/pixel_metrics.py": {
+      "sha256": "01a4a234a09a74e04f84d403697238059db6e0c91ad13334f06c0d0201e82731",
+      "bytes": 7134
+    },
+    "src/amt1/_vendor/radiology/foreground.py": {
+      "sha256": "d4a9eae87d32dc9e3504d1c14a08d00dd46ed308ab3bf861aa227c7f383be335",
+      "bytes": 2457
+    },
+    "src/amt1/_vendor/radiology/metrics.py": {
+      "sha256": "a04b79f8afd2b48a5850aa2eb331a919def0cd88b7a2a0043f09e0c98b7fae2d",
+      "bytes": 4197
+    },
+    "src/amt1/_vendor/radiology/zeroshot.py": {
+      "sha256": "3bca364c1c796d53c2dd4ec982109700d3176439dd299be58cd1e520ad51fce1",
+      "bytes": 16651
+    },
+    "src/amt1/_vendor/radiology/exact_metrics.py": {
+      "sha256": "aa1c17dcc454b110d5aec42c7d2a14363ad28e5359a7b9e602bf721870caa339",
+      "bytes": 3448
+    },
+    "src/amt1/_vendor/radiology/__init__.py": {
+      "sha256": "00363819e74f391b3748866532a506ca4ffa4c981bfd046ea4a4d039cf8076a4",
+      "bytes": 44
+    },
+    "src/amt1/_vendor/radiology/backbones/base.py": {
+      "sha256": "75a0adc8a73c506f7736fe3175477c78a56b9b2f3585f3dce8da091823081ae0",
+      "bytes": 3716
+    },
+    "src/amt1/_vendor/radiology/backbones/radio.py": {
+      "sha256": "bd4325372a243b291abeda6a8722632bf5fd5cedb3204c68454e43146c2f436e",
+      "bytes": 13938
+    },
+    "src/amt1/_vendor/radiology/backbones/__init__.py": {
+      "sha256": "46934718f0fd7a70587822fedb247824e16fcfbd55251749537359f4f098603e",
+      "bytes": 33
+    },
+    "third_party/C-RADIO-MODIFICATIONS.md": {
+      "sha256": "4b376455a346a9bdeb6d54965685bfe32a920414428731be87bb591a33e650a4",
+      "bytes": 253
+    },
+    "third_party/RADIOlogy-LICENSE": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    "third_party/SigLIP2-LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "third_party/C-RADIO-MODEL_CARD.md": {
+      "sha256": "be08bbaf49b38c62eb8496ebfd9b92292b4258838ade3d0e13e18d86978192d7",
+      "bytes": 13995
+    },
+    "third_party/C-RADIO-NVIDIA-OPEN-MODEL-LICENSE.pdf": {
+      "sha256": "396d7de220f6b0e6fcfe33836f1b99a9943769b97c56330444f8efe1b441f607",
+      "bytes": 151612
+    },
+    "third_party/SigLIP2-MODEL_CARD.md": {
+      "sha256": "48a8c5cd2873b1043f965b020f89da2d601e8213acb7713a1686d985a3c031e4",
+      "bytes": 3386
+    },
+    "third_party/NOTICES.md": {
+      "sha256": "ea7f03b9b4888fbbb80c66e2f14346be7f5e87377ed8474b1f4fdc15bd240040",
+      "bytes": 2461
+    },
+    "third_party/C-RADIO/hf_hub.py": {
+      "sha256": "5d37be21fe5a8a122716d12125242ea4970a98498b64c72401e5a9ccdf727376",
+      "bytes": 15883
+    },
+    "third_party/C-RADIO/test_video_mode.py": {
+      "sha256": "f85df497bdf19ca7aae6d9d36b22f43c24d1cbd49cf7f735671cbb05e319bfbb",
+      "bytes": 284
+    },
+    "third_party/C-RADIO/LICENSE": {
+      "sha256": "b3db9dbff447fb349db6612474db9e0992333d09a685697381221812c0c1965c",
+      "bytes": 4295
+    },
+    "third_party/C-RADIO/test_hubconf.py": {
+      "sha256": "220449898baad11bedd2b7f861e632107c55556ce07de9989f41b1965a25ee94",
+      "bytes": 1499
+    },
+    "third_party/C-RADIO/CODEOWNERS": {
+      "sha256": "b2da24809f0ed363dc54fb5f304e2a4b65abce139966d4828fc26aaae711122e",
+      "bytes": 36
+    },
+    "third_party/C-RADIO/model_results.csv": {
+      "sha256": "f530204c9a708f5bec43605207e07c59b7865bade49e7a26f92a4ea57705dea5",
+      "bytes": 403
+    },
+    "third_party/C-RADIO/RADIOv2.5_tech_report.md": {
+      "sha256": "711805519e031559326789038d1240b2db3a7541987a79aa88085a256f849322",
+      "bytes": 10923
+    },
+    "third_party/C-RADIO/OpenSans-VariableFont_wdth,wght.ttf": {
+      "sha256": "13744bbc079f0f492e4fb3b14a15d242b8d9600faacd423d58cdf937fea7ce6b",
+      "bytes": 529700
+    },
+    "third_party/C-RADIO/README.md": {
+      "sha256": "6efc6fab3c8148d64a056107c3fb7d439b258040a684f8ba77c6f44a18d7e236",
+      "bytes": 22568
+    },
+    "third_party/C-RADIO/.gitignore": {
+      "sha256": "55a408c2c4b5fe9fe33e3474237477d877d72fb2555e03d301bdd9494e0d8620",
+      "bytes": 339
+    },
+    "third_party/C-RADIO/test_hf.py": {
+      "sha256": "871512fac3ab42f648114d5ae8827e29eddea2d5cec741584f9c41c104e12b69",
+      "bytes": 8417
+    },
+    "third_party/C-RADIO/hubconf.py": {
+      "sha256": "917e3a44f1a2d4b74fb78a71dae0284af7beacf574916039496ad579dab23405",
+      "bytes": 8178
+    },
+    "third_party/C-RADIO/test_example.py": {
+      "sha256": "5a29ba287e3b248c2a2f3983e779f25558696353a520c8a05b3b24dacec8f067",
+      "bytes": 2930
+    },
+    "third_party/C-RADIO/radio/adaptor_registry.py": {
+      "sha256": "16963e07de300e5f3cbd5e343aed111d04e4e55a50e07f50ccc2ab930883ea1e",
+      "bytes": 1371
+    },
+    "third_party/C-RADIO/radio/utils.py": {
+      "sha256": "3b83163ce2650ef04973538dd79716ab015d24344ea25d52cfb0c37b093ba4ba",
+      "bytes": 1109
+    },
+    "third_party/C-RADIO/radio/feature_normalizer.py": {
+      "sha256": "a74401f5220c2e5960d39addce9ba40f481efca9ab44bb9d96535ed23e1ef62b",
+      "bytes": 4399
+    },
+    "third_party/C-RADIO/radio/dual_hybrid_vit.py": {
+      "sha256": "86853ae2ed28c902529cd9b78201350e7dba1cf54ea9e57578241ecc0d88d867",
+      "bytes": 7179
+    },
+    "third_party/C-RADIO/radio/adaptor_generic.py": {
+      "sha256": "3d1b5a015ff3754a9eb64cd56b4d04cae01e537a1ffa606adaf904c55fff07a1",
+      "bytes": 3747
+    },
+    "third_party/C-RADIO/radio/extra_models.py": {
+      "sha256": "a938b96715266d2f65325e56d0d8e42465d23e944e905d2820023472785c55a9",
+      "bytes": 5763
+    },
+    "third_party/C-RADIO/radio/common.py": {
+      "sha256": "d6aec26f885e1a8f2c3eab7db76eb97594c5b2ff47a0fdf888c16fc42fa403f1",
+      "bytes": 7158
+    },
+    "third_party/C-RADIO/radio/open_clip_adaptor.py": {
+      "sha256": "c2eb9166de48f5eb5f90f8a750e8ebe67da93698e794dc0bbdab5f013bab8e66",
+      "bytes": 1623
+    },
+    "third_party/C-RADIO/radio/adaptor_module_factory.py": {
+      "sha256": "2beac17dc5824c7d9f925dc782cdd4b49bd15cf206bf1cbaa9108a8966e33316",
+      "bytes": 3278
+    },
+    "third_party/C-RADIO/radio/block.py": {
+      "sha256": "64f1307ca328dbab2a7c55c37a08ab5da79a6314a9bf450ffa137e7cf42671a4",
+      "bytes": 2044
+    },
+    "third_party/C-RADIO/radio/radio_model.py": {
+      "sha256": "7799257a56581c45daa36e8bef4bcec335f86f5f0a89cfd53cd40da2d64ecc95",
+      "bytes": 14992
+    },
+    "third_party/C-RADIO/radio/enable_cpe_support.py": {
+      "sha256": "0ba42a75f50ef2780d5847991b4eb301e0b1d9b86f37ee4ecf231ee99bca9335",
+      "bytes": 6775
+    },
+    "third_party/C-RADIO/radio/extra_timm_models.py": {
+      "sha256": "d7364d5abf5b617782366948f0e593d7a2df275b076094afa1ebc5276a9f7102",
+      "bytes": 9892
+    },
+    "third_party/C-RADIO/radio/input_conditioner.py": {
+      "sha256": "8097a180dc7e3700d07b23a94febf30ff98d3b248203294a4e1f9db0e1ee06c7",
+      "bytes": 1613
+    },
+    "third_party/C-RADIO/radio/eradio_model.py": {
+      "sha256": "bf76c60b991813eef45c76246cd7dcee3fefbf39bde3d2b6ac8576067012d05f",
+      "bytes": 58289
+    },
+    "third_party/C-RADIO/radio/vision_transformer_xpos.py": {
+      "sha256": "a43bbfd917148033ae45587d1a66f39f68a991651974bf812386308d457f954b",
+      "bytes": 13097
+    },
+    "third_party/C-RADIO/radio/adaptor_base.py": {
+      "sha256": "e8def6b388c80ea8a6e1e4e50c044aa3a77338f7e9bb34f7d2450dbf317c2eaf",
+      "bytes": 1771
+    },
+    "third_party/C-RADIO/radio/radio1d.py": {
+      "sha256": "8a7dda0f78aad5a1e11627e8411919f4cbb0002f42a4f7c22c35a518957f5cb8",
+      "bytes": 78608
+    },
+    "third_party/C-RADIO/radio/siglip2_adaptor.py": {
+      "sha256": "971b7b2b17d08fade68a325359d2c8f860b2fa6a5ad86cc1fc6bc7a95e564c36",
+      "bytes": 3371
+    },
+    "third_party/C-RADIO/radio/vitdet.py": {
+      "sha256": "5b83b4c7b90b797d854a6da2fd4093ce9210a52533d3f7ba6bf505793b6c68c3",
+      "bytes": 6318
+    },
+    "third_party/C-RADIO/radio/vit_patch_generator.py": {
+      "sha256": "e7d9956b3416daee1bfd6cd6aa73d98143eab900ac50c9b54252f2240d443337",
+      "bytes": 11733
+    },
+    "third_party/C-RADIO/radio/enable_damp.py": {
+      "sha256": "7e2a0b6f8934ac6e4a4768e5ca84cb4ff09ba3726a470f1cf046bd5169b2e334",
+      "bytes": 1290
+    },
+    "third_party/C-RADIO/radio/adaptor_attn.py": {
+      "sha256": "fbcb901111f691da32c632749a92505854a3b7c3e4b650bb7d49d38c74485ce1",
+      "bytes": 1843
+    },
+    "third_party/C-RADIO/radio/adaptor_mlp.py": {
+      "sha256": "e75a9ed1f7f58c749dec5a510d699f36f32fdb7f3b61cd8a7e3ccd5afd2c9b77",
+      "bytes": 4025
+    },
+    "third_party/C-RADIO/radio/enable_spectral_reparam.py": {
+      "sha256": "b8e703400604ee5f9cdfac0de9b857b7f5126aad8bba03604b04f52f7641d6cb",
+      "bytes": 11004
+    },
+    "third_party/C-RADIO/radio/hf_model.py": {
+      "sha256": "d28c0a0238ca8854a9af5a9f003761332bfc9182601b3b7466d9242be91ee96f",
+      "bytes": 7935
+    },
+    "third_party/C-RADIO/radio/dinov2_arch.py": {
+      "sha256": "5433d08522c28f46a69e710da1a86fc1d76fc03562dbb9b2b49baf5db21195d3",
+      "bytes": 35529
+    },
+    "third_party/C-RADIO/radio/cls_token.py": {
+      "sha256": "64ee35f128380c3bb9bc1a913e98ac328220be88964f2092686c637ef866fc79",
+      "bytes": 1787
+    },
+    "third_party/C-RADIO/radio/conv.py": {
+      "sha256": "b63c4479dbca534b4283e8e30246a6fc512bd5b62fc0802830c8358ca13c9e97",
+      "bytes": 2414
+    },
+    "third_party/C-RADIO/radio/__init__.py": {
+      "sha256": "ddd44b8c7b53ad33f14682d7491014db9ee044ae0ee37c1b7e898935acbe7969",
+      "bytes": 800
+    },
+    "third_party/C-RADIO/radio/forward_intermediates.py": {
+      "sha256": "eb5a562d11edc655876eeb95bc1c3b4c7484b963dae41a3f76f7acd2a6906b9e",
+      "bytes": 5604
+    }
+  }
+}

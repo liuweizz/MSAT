@@ -1,0 +1,244 @@
+{
+  "br35h": {
+    "count": 3000,
+    "test_meta_sha256": "7777fee3a4615e8dc822614625c50c32d880fffc89b5b4cae248dfb8874c6fca",
+    "provider": "AdaCLIP-author public original test archive",
+    "split": "Author AdaCLIP public original test list; exact RADIOlogy test manifest not individually authenticated; image classification only",
+    "data_license": "Provider terms apply; code license does not grant medical-data rights"
+  },
+  "brain_mri": {
+    "count": 253,
+    "test_meta_sha256": "612ce28944cb14ecfc0edc584d4d35c51afabd855d15c0f11c32720e6243d746",
+    "provider": "AdaCLIP-author public original test archive",
+    "split": "Author AdaCLIP public original test list; exact RADIOlogy test manifest not individually authenticated; image classification only",
+    "data_license": "Provider terms apply; code license does not grant medical-data rights"
+  },
+  "btad": {
+    "sources": [
+      {
+        "url": "https://drive.google.com/file/d/19Kd8jJLxZExwiTc9__6_r_jPqkmTXt4h/view",
+        "bytes": 1297965200,
+        "sha256": "484de2403efa8b282c0a46181f0c5aac5f07b91595020e95f68cde80bbddbd38",
+        "published_checksum": null
+      }
+    ],
+    "license": "Original release license unresolved; author-hosted processed data; no redistribution claim.",
+    "scope": "same-source-test-paper-split-unverified",
+    "exact_paper_split": false,
+    "mask_semantics": "PIL L (palette-aware) retained at original size, then nearest-neighbor518 and >0 as pinned RADIOlogy loader; source grayscale antialias values preserved",
+    "admitted_manifest_sha256": "0501866c75c5cd6cdec792b981cfd7647e3dee94805d30c5167401bbb8829287"
+  },
+  "clinicdb": {
+    "sources": [
+      {
+        "source_url": "https://drive.google.com/file/d/1ciqZwMs1smSGDlwQ6tsr6YzylrqQBn9n/view",
+        "archive_sha256": "0d50ccdddff47e28fa283d6688c447703a0355f639ec6f608dfc9fb9bc354457",
+        "archive_bytes": 84060233
+      },
+      {
+        "adaclip_commit": "b762ac40c3f33c77e7e513e48cb436f059d456da"
+      }
+    ],
+    "license": "No medical-data license inferred from code license; original author package and source terms retained; no redistribution performed",
+    "scope": "same-source-test-paper-split-unverified",
+    "exact_paper_split": null,
+    "mask_semantics": "Original author mask converted by pinned loader L>0 support, exact same support saved as uint8 0/255 PNG; segmentation lesion presence is not malignancy diagnosis",
+    "admitted_manifest_sha256": "90882bff683c46e4906f8fb94008a183e8edc00eb2393fa86b66e29507377591"
+  },
+  "colondb": {
+    "sources": [
+      {
+        "source_url": "https://drive.google.com/file/d/1tjZ0o5dgzka3wf_p4ErSRJ9fcC-RJK8R/view",
+        "archive_sha256": "ad07605896616272c214b00903c3851f5ea457632f73a3f438139e5c0e4cd465",
+        "archive_bytes": 95690624
+      },
+      {
+        "adaclip_commit": "b762ac40c3f33c77e7e513e48cb436f059d456da"
+      }
+    ],
+    "license": "No medical-data license inferred from code license; original author package and source terms retained; no redistribution performed",
+    "scope": "same-source-test-paper-split-unverified",
+    "exact_paper_split": null,
+    "mask_semantics": "Original author mask converted by pinned loader L>0 support, exact same support saved as uint8 0/255 PNG; segmentation lesion presence is not malignancy diagnosis",
+    "admitted_manifest_sha256": "b2d39f1c9aa318d9490e060b6138bd222239a38e9dac3f7c3b35ea6dbebd345d"
+  },
+  "dagm": {
+    "sources": [
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class1.zip?download=1",
+        "bytes": 267943772,
+        "sha256": "eaa6531c468dfe71d06ac38cbbcc8f92aafe4bfcac2590cbc8d54482fb696e84",
+        "published_checksum": "md5:9ed7f0480aea9bd0a83b429a17e3e750"
+      },
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class2.zip?download=1",
+        "bytes": 228042837,
+        "sha256": "47e626aab831085c19e94093bb3cd3815a356f0df3dd3245ec2c679fba776169",
+        "published_checksum": "md5:024f1f6c6d11d72ee12f19dcc98aa3d8"
+      },
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class3.zip?download=1",
+        "bytes": 202923699,
+        "sha256": "3e76905bbb28782cd7b115123129e92f256fc69490d72a2eaadccac52b7e7175",
+        "published_checksum": "md5:57a337e93e38c71e01d15770e252f46d"
+      },
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class4.zip?download=1",
+        "bytes": 196885903,
+        "sha256": "880fb4af29444cf0130142de4db91dbe53ea83f02125ba985a33a7fb2433aabc",
+        "published_checksum": "md5:d6852ae3667db59e6a4d586d98633540"
+      },
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class5.zip?download=1",
+        "bytes": 215005526,
+        "sha256": "0e3e868ae3b8b7a948cdfe0f80a044ff4b6eb1686933e7dba5ed6a642ad22aa5",
+        "published_checksum": "md5:463a932d87a5c0e02ee10cdb3265c318"
+      },
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class6.zip?download=1",
+        "bytes": 260830045,
+        "sha256": "6be68990cb4f14b3f2d163fb3e490c32485346e2c72c09839704c663691aaf73",
+        "published_checksum": "md5:40ba70f232fe1cb891a46c1b77dc4940"
+      },
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class7.zip?download=1",
+        "bytes": 380424293,
+        "sha256": "b1369b424178a2183a4ee736e3c3297342a03bf922e2098c6c16fe23b5a7f02f",
+        "published_checksum": "md5:67571381c8aa5f82d5180e6e8838f735"
+      },
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class8.zip?download=1",
+        "bytes": 392568394,
+        "sha256": "09ebf1baf90e05e06586ebb7d0d14a67a08236fcaeae7583c4fc805474c3b085",
+        "published_checksum": "md5:d02a892a8b6180893c8ea018848606cb"
+      },
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class9.zip?download=1",
+        "bytes": 392362320,
+        "sha256": "6cc205af3e23160acbee686d7b38b316558cad62a79debf3ec0292248ff2f149",
+        "published_checksum": "md5:083d8da49d46614202a332f9e9dd1bca"
+      },
+      {
+        "url": "https://zenodo.org/records/12750201/files/Class10.zip?download=1",
+        "bytes": 410358784,
+        "sha256": "d3f72320446346d44722c4d074188cd1a7179f97b24faed8a96db5fdc8b9d5ed",
+        "published_checksum": "md5:2743ebc79cb91551b51599a67f0e7528"
+      }
+    ],
+    "license": "CC BY 4.0, Zenodo record12750201 metadata license id cc-by-4.0; original record preserved",
+    "scope": "paper-aligned",
+    "exact_paper_split": true,
+    "mask_semantics": "PIL L (palette-aware) retained at original size, then nearest-neighbor518 and >0 as pinned RADIOlogy loader; source grayscale antialias values preserved",
+    "admitted_manifest_sha256": "6fcd1a783436504467e54b6974bf7dd95fe799f2e888af50e1be1e2388d2434b"
+  },
+  "dtd": {
+    "sources": [
+      {
+        "url": "https://drive.google.com/file/d/1em51XXz5_aBNRJlJxxv3-Ed1dO9H3QgS/view",
+        "bytes": 356867277,
+        "sha256": "7ca812f4068306d48d98debf8b368609c304bb492c42647e89f389e83195ace9",
+        "published_checksum": null
+      }
+    ],
+    "license": "Original synthetic release terms unresolved; no redistribution claim.",
+    "scope": "same-source-test-paper-split-unverified",
+    "exact_paper_split": false,
+    "mask_semantics": "PIL L (palette-aware) retained at original size, then nearest-neighbor518 and >0 as pinned RADIOlogy loader; source grayscale antialias values preserved",
+    "admitted_manifest_sha256": "7de42b4c856576eaba9d427a93e572082209d115b6eb610326720b4e5efb3d4c"
+  },
+  "headct": {
+    "count": 200,
+    "test_meta_sha256": "8cb162e61944c1e433106d2deb11bc30fb625f8323fac5f6319e6dba3f2b76ac",
+    "provider": "AdaCLIP-author public original test archive",
+    "split": "Author AdaCLIP public original test list; exact RADIOlogy test manifest not individually authenticated; image classification only",
+    "data_license": "Provider terms apply; code license does not grant medical-data rights"
+  },
+  "isic": {
+    "sources": [
+      {
+        "source_url": "https://drive.google.com/file/d/1atZwmnFsz7mCsHWBZ8pkL_-Eul9bKFEx/view",
+        "archive_sha256": "8926b87631b004dd045b44bf6f095117ee702390a39fa6f522dce087feed34c1",
+        "archive_bytes": 241861080
+      },
+      {
+        "adaclip_commit": "b762ac40c3f33c77e7e513e48cb436f059d456da"
+      }
+    ],
+    "license": "No medical-data license inferred from code license; original author package and source terms retained; no redistribution performed",
+    "scope": "same-source-test-paper-split-unverified",
+    "exact_paper_split": null,
+    "mask_semantics": "Original author mask converted by pinned loader L>0 support, exact same support saved as uint8 0/255 PNG; segmentation lesion presence is not malignancy diagnosis",
+    "admitted_manifest_sha256": "0e02d253837dd1ecbbc681f4e37296352a4ac6a59f5dd15c71b48348a09a3471"
+  },
+  "ksdd": {
+    "sources": [
+      {
+        "url": "https://data.vicos.si/datasets/KSDD/KolektorSDD.zip",
+        "bytes": 101831129,
+        "sha256": "65dc621693418585de9c4467d1340ea7958a6181816f0dc2883a1e8b61f9d4dc",
+        "published_checksum": null
+      }
+    ],
+    "license": "CC BY-NC-SA 4.0; original fine annotations only, not box/dilated release.",
+    "scope": "full-release-fallback",
+    "exact_paper_split": false,
+    "mask_semantics": "PIL L (palette-aware) retained at original size, then nearest-neighbor518 and >0 as pinned RADIOlogy loader; source grayscale antialias values preserved",
+    "admitted_manifest_sha256": "f531b6e2c11aafdbac65552bdbe6e4b33e4f29400370d20c6a7de4417f92d865"
+  },
+  "mpdd": {
+    "sources": [
+      {
+        "url": "https://drive.google.com/file/d/1cLkZs8pN8onQzfyNskeU_836JLjrtJz1/view",
+        "bytes": 1773659769,
+        "sha256": "e72772a7b67bbee200a9f658f2eca64cab29f6ea0cd013f52a8d21be702ac12e",
+        "published_checksum": null
+      }
+    ],
+    "license": "Original MPDD CC BY-NC-SA 4.0; processed archive terms retained where supplied.",
+    "scope": "same-source-test-paper-split-unverified",
+    "exact_paper_split": false,
+    "mask_semantics": "PIL L (palette-aware) retained at original size, then nearest-neighbor518 and >0 as pinned RADIOlogy loader; source grayscale antialias values preserved",
+    "admitted_manifest_sha256": "78fc4fb550f730ea7f2b6e2e2d95b0d198269012737b14c70482af4c7b698870"
+  },
+  "mvtec": {
+    "sources": [
+      {
+        "source_url": "https://www.mvtec.com/company/research/datasets/mvtec-ad"
+      }
+    ],
+    "license": "Inherited original dataset terms; source files retained; no redistribution performed",
+    "scope": "paper-aligned",
+    "exact_paper_split": null,
+    "mask_semantics": "original binary defect support through pinned MVTecAD.load_mask(convert L; nearest518; >0)",
+    "admitted_manifest_sha256": "38ea6c09410fa0f176c87486ecd1a11fd5dbb048ed7d616b6e25f65905b3b2b9"
+  },
+  "tn3k": {
+    "sources": [
+      {
+        "source_url": "https://drive.google.com/file/d/1LuKEMhrUGwFBlGCaej46WoooH89V3O8_/view",
+        "archive_sha256": "845f5e410bd9d4be7cd6a45db64be2bb2f1f4e65d8fa1e5c16e23f9839240dc7",
+        "archive_bytes": 39958352
+      },
+      {
+        "adaclip_commit": "b762ac40c3f33c77e7e513e48cb436f059d456da"
+      }
+    ],
+    "license": "No medical-data license inferred from code license; original author package and source terms retained; no redistribution performed",
+    "scope": "same-source-test-paper-split-unverified",
+    "exact_paper_split": null,
+    "mask_semantics": "Original author mask converted by pinned loader L>0 support, exact same support saved as uint8 0/255 PNG; segmentation lesion presence is not malignancy diagnosis",
+    "admitted_manifest_sha256": "b8d4e4603810a1def30eff33b89293230f158be853e8706df7ed71bbc1491402"
+  },
+  "visa": {
+    "sources": [
+      {
+        "source_url": "https://github.com/amazon-science/spot-diff"
+      }
+    ],
+    "license": "Inherited original dataset terms; source files retained; no redistribution performed",
+    "scope": "paper-aligned",
+    "exact_paper_split": null,
+    "mask_semantics": "original binary defect support through pinned MVTecAD.load_mask(convert L; nearest518; >0)",
+    "admitted_manifest_sha256": "0e9714a24563ecee8640b95c99483d19f672e15ab308aa932f93298feacbf0b2"
+  }
+}
