@@ -1,58 +1,69 @@
-# Admitted data and ordered evaluation manifests
+# Datasets and Evaluation
 
-The private experiment archive contains one portable manifest per category, preserving ordered sample IDs, labels, prompt names, foreground vocabulary, task applicability and image paths relative to an explicitly supplied data root. The completed benchmark covers 66 categories and 20,277 evaluation images or frames. Supply external evaluation manifests to the manifest-based CLI commands.
+MSAT is evaluated across **14 benchmarks** (7 industrial and 7 medical datasets, 66 categories, 20,277 images/frames):
 
-For the 11 industrial/medical-localization datasets, point `--data-root` at a directory matching the exported `datasets` path group. The manifest records the actual prepared layout used for MVTec, VisA, BTAD, MPDD, KSDD, DAGM, DTD-Synthetic, ISIC, ClinicDB, ColonDB and TN3K. Supply masks at their listed relative paths for source-data preparation or use the checksummed prepared `GT.npy` artifacts for exact benchmark evaluation. The predictor receives RGB and prompt/geometry metadata.
+- **Industrial (Detection & Localization)**: MVTec-AD, VisA, BTAD, MPDD, KolektorSDD (KSDD), DAGM, DTD-Synthetic
+- **Medical Detection**: HeadCT (200 images), BrainMRI (253 images), Br35H (3,000 images)
+- **Medical Localization**: ISIC, CVC-ClinicDB, CVC-ColonDB, TN3K
 
-Medical classification manifests for HeadCT, BrainMRI and Br35H use the original accessible AdaCLIP-author `meta.json` test lists. Their `--data-root` is the corresponding author's archive root, containing `headct/`, `brain_mri/` or `br35h/` as listed in each manifest. Counts are 200, 253 and 3,000 respectively. Pixel GT is absent for these datasets. The exact RADIOlogy paper test-file identity remains unverified.
+Download links and source information are listed in `configs/dataset_sources.json`.
 
-KSDD uses all 399 admitted original frames as the recorded fallback, including 52 anomalous frames. Each frame is split into three bands using rounded original row boundaries. Original prepared JPEG bands use quality 95. A frame manifest contains each band's path and original crop edges. Evaluation remains at original-frame level, using separately resized/blurred bands and one whole-frame transport.
+## Data Preparation
 
-All paths and labels are frozen from the measured benchmark. There is no randomized resplitting. Raw data, masks and dataset rights must be obtained from the respective providers. The local artifact bundle supplies exact admitted masks and scores for historical replay, while RGB inputs remain explicitly configured.
+Preparation manifests are provided under `configs/data_preparation/`.
 
-Portable data preparation should retain these source identities. The `check-data` command validates every image path and all provided file hashes. `infer-manifest` accepts the same manifests, and `evaluate` consumes the output predictions in their original order. This supports already admitted layouts without a hidden dataset registry or machine-specific import.
-
-`configs/data_preparation/` provides the same frozen samples with additional original
-source-relative image and mask paths. `prepare-data` copies the original image bytes,
-preserves grayscale mask values through Pillow `convert("L")`, and generates the
-recorded KSDD JPEG bands. It preserves existing matching files and reports conflicting
-outputs. Set `--source-root` to the recorded provider-tree layout and `--output-root`
-to the root used by the evaluation manifests. Download URLs, source checksums and
-recorded split/rights caveats are in `configs/dataset_sources.json`.
-
-`evaluate --data-root` loads masks directly from this prepared public layout.
-`prepare-gt` exports the same boolean arrays independently of predictions. Both use
-the original-frame nearest-neighbor 518 geometry, including whole-frame KSDD masks.
-
-## Single-image medical inference
-
-Medical images use `--states clinical`. The following examples use the category,
-prompt name and geometry recorded in the corresponding data-preparation manifests.
-Replace the image path with a prepared RGB-readable input and choose a new output
-filename for each prediction.
-
-HeadCT uses classification-only geometry.
+1. **Prepare datasets** into the standard evaluation layout (copies images, converts masks to grayscale, and splits extreme-aspect-ratio KSDD frames into 3 non-overlapping bands):
 
 ```bash
-python -m amt1 predict --image /path/to/headct.png \
-  --category headct --prompt-name "head CT" --states clinical \
-  --geometry classification-only --assets configs/assets.json \
-  --device cuda:0 --output outputs/headct.npz
+python -m amt1 prepare-data --source-root /path/to/raw_datasets --output-root /path/to/prepared_datasets
 ```
 
-The resulting NPZ contains `J`, `G` and `native`. For this geometry, the Python API
-returns `None` for its localization maps.
-
-TN3K uses ordinary localization geometry and a thyroid-ultrasound prompt.
+2. **Verify dataset files and checksums**:
 
 ```bash
-python -m amt1 predict --image /path/to/thyroid.png \
-  --category tn3k --prompt-name "thyroid ultrasound" --states clinical \
-  --geometry ordinary --assets configs/assets.json \
-  --device cuda:0 --output outputs/tn3k.npz
+python -m amt1 check-data --data-root /path/to/prepared_datasets
 ```
 
-Clinical states select the `anatex` foreground vocabulary and a `0.014` gate
-threshold by default. For benchmark evaluation, use `infer-manifest` with the exact
-external manifest to carry the frozen prompt settings, sample order and identity
-into the prediction completion markers.
+3. **Run manifest-based inference and evaluation**:
+   - Use `python -m amt1 infer-manifest` with the category manifest and `--data-root`.
+   - Use `python -m amt1 evaluate --data-root /path/to/prepared_datasets` to compute image-level (`AUROC`, `max-F1`, `AP`) and pixel-level (`AUROC`, `max-F1`, `AP`, `AUPRO@0.3`, `PRO@1%FPR`) metrics.
+   - Use `python -m amt1 prepare-gt` to export ground-truth boolean masks resized to `518 × 518` (whole-frame masks for KSDD).
+
+### Dataset-Specific Notes
+
+- **Medical classification datasets (`HeadCT`, `BrainMRI`, `Br35H`)**: Follow the test splits from [AdaCLIP](https://github.com/caoyunkang/AdaCLIP) (`headct/`, `brain_mri/`, `br35h/`). Image-level metrics are reported without pixel ground truth.
+- **KSDD**: Evaluated on all 399 full-frame images (52 anomalous). Each frame is split into 3 non-overlapping strips along its long axis for visual encoding and reassembled for whole-frame transport and evaluation.
+
+## Single-Image Medical Inference
+
+Medical datasets use clinical prompt states (`--states clinical`), which default to the `anatex` foreground vocabulary and a foreground-gating threshold of `0.014`.
+
+### Medical Classification-Only (`HeadCT`, `BrainMRI`, `Br35H`)
+
+```bash
+python -m amt1 predict \
+  --image /path/to/headct.png \
+  --category headct \
+  --prompt-name "head CT" \
+  --states clinical \
+  --geometry classification-only \
+  --assets configs/assets.json \
+  --device cuda:0 \
+  --output outputs/headct.npz
+```
+
+The output `.npz` contains `J`, `G`, and `native` (localization maps are omitted under `classification-only`).
+
+### Medical Localization (`ISIC`, `CVC-ClinicDB`, `CVC-ColonDB`, `TN3K`)
+
+```bash
+python -m amt1 predict \
+  --image /path/to/thyroid.png \
+  --category tn3k \
+  --prompt-name "thyroid ultrasound" \
+  --states clinical \
+  --geometry ordinary \
+  --assets configs/assets.json \
+  --device cuda:0 \
+  --output outputs/tn3k.npz
+```
