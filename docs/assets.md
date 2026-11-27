@@ -1,44 +1,40 @@
-# Explicit local model assets
+# Model Setup
 
-The verified assets are listed with file-level SHA256 in `configs/assets_manifest.json`.
+MSAT uses two frozen vision–language checkpoints:
 
-| Asset | Official repository | Revision |
+| Model | Hugging Face Repository | Revision |
 | --- | --- | --- |
-| C-RADIOv4-H | nvidia/C-RADIOv4-H | 0057b339059c0b9e1b4ba996f975410ebbfdfcc8 |
-| SigLIP2 giant teacher | google/siglip2-giant-opt-patch16-384 | a713301b217d38485fb2204c808367d10bc3cc40 |
+| C-RADIOv4-H | [`nvidia/C-RADIOv4-H`](https://huggingface.co/nvidia/C-RADIOv4-H) | `0057b339059c0b9e1b4ba996f975410ebbfdfcc8` |
+| SigLIP2 Giant | [`google/siglip2-giant-opt-patch16-384`](https://huggingface.co/google/siglip2-giant-opt-patch16-384) | `a713301b217d38485fb2204c808367d10bc3cc40` |
 
-Download the exact filenames from the per-file official URLs in that manifest. Place the C-RADIO checkpoint in `artifacts/models/radio/` and the complete SigLIP2 snapshot in `artifacts/models/siglip2/`. The latter includes both safetensor shards, the index, configuration, processor and tokenizer files. Check each file against its SHA256 before running.
+Exact filenames and SHA256 checksums are listed in `configs/assets_manifest.json`.
 
-`third_party/C-RADIO/` contains the frozen source used by the measured environment. Its public source-tree checksums and upstream provenance are recorded in `third_party/provenance.json`. The SigLIP2 adaptor reads the explicitly configured local directory. The RADIOlogy backbone loads the explicit local C-RADIO checkpoint while preserving the canonical version's resource metadata.
+## Directory Layout
 
-The checkpoint's stored half-precision weights are loaded into the validated float32/eval runtime. Teacher heads and the text adaptor retain the original architecture and tokenizer. Runtime visual inference disables autocast and TF32. Model construction uses the supplied local source and weights.
-
-The local release includes physical copies of these assets under the ignored `artifacts/` directory. GitHub source uploads exclude the weights. Any separate distribution of weights remains governed by the upstream model licenses and model cards.
-
-## Configure asset paths
-
-The supplied `configs/assets.json` expects this project-relative layout.
+Download the C-RADIOv4-H checkpoint into `artifacts/models/radio/` and the complete SigLIP2 snapshot (weights, config, processor, and tokenizer files) into `artifacts/models/siglip2/`:
 
 ```text
 MSAT/
-  configs/assets.json
-  third_party/C-RADIO/
-  artifacts/models/
-    radio/c-radio_v4-h_half.pth.tar
-    siglip2/
+├── configs/assets.json
+├── third_party/C-RADIO/
+└── artifacts/models/
+    ├── radio/
+    │   └── c-radio_v4-h_half.pth.tar
+    └── siglip2/
 ```
 
-| Configuration key | Expected content |
+## Configuration (`configs/assets.json`)
+
+The default `configs/assets.json` uses paths relative to the config file directory (absolute paths are also supported):
+
+| Key | Description |
 | --- | --- |
-| `radio_source` | C-RADIO source directory containing `hubconf.py` |
-| `checkpoint` | C-RADIOv4-H checkpoint file |
-| `teacher_directory` | Complete local SigLIP2 snapshot directory |
+| `radio_source` | Path to the C-RADIO source directory containing `hubconf.py` (`third_party/C-RADIO/`) |
+| `checkpoint` | Path to the C-RADIOv4-H checkpoint (`c-radio_v4-h_half.pth.tar`) |
+| `teacher_directory` | Path to the local SigLIP2 snapshot directory |
 
-`Predictor.from_config` resolves relative values against the directory containing
-the JSON file. Moving the JSON file requires updating its relative values to match
-the new location. Absolute asset paths can also be supplied in the JSON.
+## Runtime Notes
 
-Inference uses offline Hugging Face and Transformers loading. Prepare both model
-snapshots before constructing the predictor. Missing asset paths raise
-`FileNotFoundError` with the resolved location. Compare downloaded files with
-`configs/assets_manifest.json` to check exact filenames, byte sizes and SHA256.
+- Weights are loaded in `float32` eval mode with `autocast` and `TF32` disabled for reproducible inference.
+- Hugging Face / Transformers models are loaded offline from the configured local directories.
+- Upstream model weights remain subject to their respective licenses (see `third_party/NOTICES.md`).
